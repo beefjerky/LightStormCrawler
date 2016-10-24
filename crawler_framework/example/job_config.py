@@ -1,10 +1,10 @@
 #coding:utf-8
 
 #管理job queue 和代理限速的redis
-redis_host = 'dbredis'  
-redis_port = 6380
-jobqueue_db = 8
-proxy_db = 9
+redis_host = 'redis'  
+redis_port = 6379
+jobqueue_db = 1
+proxy_db = 2
 
 #job名
 jobname = 'title'
@@ -38,8 +38,7 @@ re_domain = {
 
 #判断页面内容是否正确
 page_integrity_map = {
-    'news.ifeng.com': lambda text: u'凤凰' in text,
-    'finance.ifeng.com': lambda text: u'凤凰' in text
+    'news.baidu.com': lambda text: u'百度' in text
 }
 
 #判断header是否正确
@@ -48,8 +47,8 @@ header_integrity_map = {
 }
 
 #邮件收发地址
-mailto_list = ['eng@51dianyue.com']
-from_mail = {'mail_user': 'trac.conver', 'mail_host': '192.168.250.246', 'mail_pass': 'dianyue207', 'mail_postfix': '51dianyue.com'}
+mailto_list = ['']
+from_mail = {'mail_user': '', 'mail_host': '', 'mail_pass': '', 'mail_postfix': ''}
 
 #from crawler_framework.stats  import stats
 #stats.update({'order': {'i': 0, 't': 0}}
